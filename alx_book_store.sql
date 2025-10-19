@@ -3,9 +3,9 @@ CREATE DATABASE IF NOT EXISTS alx_book_store DEFAULT CHARACTER SET utf8 COLLATE 
 -- Use the database
 USE `alx_book_store`;
 --Create Author's Table
-CREATE TABLE IF NOT EXISTS `Authors` (
-    `author_id` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `author_name` VARCHAR(255)
+CREATE TABLE IF NOT EXISTS Authors (
+    author_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    author_name VARCHAR(255)
 );
 -- Create Authors table
 CREATE TABLE IF NOT EXISTS `Books` (
