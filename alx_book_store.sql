@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `Books` (
     `author_id` INT UNSIGNED NOT NULL,
     `price` DOUBLE,
     `publication_date` DATE,
-    FOREIGN KEY (`author_id`) REFERENCES `Authors`(`author_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (author_id) REFERENCES Authors(author_id) ON DELETE CASCADE ON UPDATE CASCADE,
 );
 --Create Customer's Table
 CREATE TABLE IF NOT EXISTS `Customers` (
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `Orders` (
     name VARCHAR(255),
     customer_id INT UNSIGNED NOT NULL,
     order_date DATE,
-    FOREIGN KEY (`customer_id`) REFERENCES `Customers`(`customer_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ON DELETE CASCADE ON UPDATE CASCADE,
 );
 --Create Order Deatails Table
 CREATE TABLE IF NOT EXISTS `Order_Details` (
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `Order_Details` (
     order_id INT UNSIGNED NOT NULL,
     book_id INT UNSIGNED NOT NULL,
     quantity DOUBLE,
-    FOREIGN KEY (`order_id`) REFERENCES `Orders`(`order_id`),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (`book_id`) REFERENCES `Books`(`book_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE CASCADE ON UPDATE CASCADE,
 );
