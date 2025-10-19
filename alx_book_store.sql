@@ -1,5 +1,5 @@
 -- Create the database
-CREATE DATABASE IF NOT EXISTS `alx_book_store` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+CREATE DATABASE IF NOT EXISTS alx_book_store DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 -- Use the database
 USE `alx_book_store`;
 --Create Author's Table
